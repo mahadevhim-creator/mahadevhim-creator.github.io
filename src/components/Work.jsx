@@ -19,10 +19,15 @@ function Work() {
   return (
     <section id="work" className="work">
       <div className="container">
-        <h2>My Work</h2>
+        <h2 data-aos="fade-up">My Work</h2>
         <div className="work-grid">
           {videos.map((video, index) => (
-            <div key={index} className="work-card">
+            <div 
+              key={index} 
+              className="work-card"
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
+            >
               <div className="video-wrapper">
                 <iframe
                   src={video.embedUrl}

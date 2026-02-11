@@ -13,10 +13,15 @@ function Services() {
   return (
     <section id="services" className="services">
       <div className="container">
-        <h2>My Services</h2>
+        <h2 data-aos="fade-up">My Services</h2>
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-card">
+            <div 
+              key={index} 
+              className="service-card"
+              data-aos="flip-left"
+              data-aos-delay={index * 100}
+            >
               <h3>{service}</h3>
             </div>
           ))}
